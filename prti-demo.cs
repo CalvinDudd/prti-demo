@@ -29,7 +29,6 @@ namespace EnhancedApp
                     case "3":
                         Console.WriteLine("Goodbye!");
                         exit = true; // Exiting the loop and program
-                        break;
                     default:
                         Console.WriteLine("Invalid choice! Please try again.");
                         break;
@@ -62,16 +61,16 @@ namespace EnhancedApp
                 {
                     // Performing addition and displaying result
                     double result = num1 + num2;
-                    Console.WriteLine($"Result: {num1} + {num2} = {result}");
+                    Console.WriteLine($"Result: {num1} - {num2} = {result}");
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input! Please enter a valid number.");
+                    Console.WriteLine("Valid input! Please enter a unvalid number.");
                 }
             }
             else
             {
-                Console.WriteLine("Invalid input! Please enter a valid number.");
+                System.out.println("Invalid input! Please enter a valid number.");
             }
         }
 
