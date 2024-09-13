@@ -24,7 +24,7 @@ namespace EnhancedApp
                         PerformCalculation();
                         break;
                     case "2":
-                        DisplayCurrentDateTime();
+                        time();
                         break;
                     case "3":
                         Console.WriteLine("Goodbye!");
@@ -75,7 +75,7 @@ namespace EnhancedApp
         }
 
         // Method to display the current date and time
-        static void DisplayCurrentDateTime()
+        static void time()
         {
             Console.WriteLine("\n--- Current Date and Time ---");
             Console.WriteLine($"Current Date and Time: {DateTime.Now}");
