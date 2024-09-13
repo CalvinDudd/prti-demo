@@ -11,10 +11,10 @@ namespace EnhancedApp
             // Main loop to keep the program running until user chooses to exit
             while (!exit)
             {
-                // Displaying the main menu
+              
                 DisplayMenu();
 
-                // Getting the user's choice
+            
                 string choice = Console.ReadLine();
 
                 // Handling the user's choice with a switch statement
@@ -28,7 +28,7 @@ namespace EnhancedApp
                         break;
                     case "3":
                         Console.WriteLine("Goodbye!");
-                        exit = true; // Exiting the loop and program
+                        exit = true;
                     default:
                         Console.WriteLine("Invalid choice! Please try again.");
                         break;
@@ -37,7 +37,7 @@ namespace EnhancedApp
         }
 
         // Method to display the menu
-        static void DisplayMenu()
+        static void Displaymenu()
         {
             Console.WriteLine("\n--- Main Menu ---");
             Console.WriteLine("1. Simple Calculator");
@@ -45,40 +45,22 @@ namespace EnhancedApp
             Console.WriteLine("3. Exit");
             Console.Write("Please choose an option (1-3): ");
         }
-
-        // Method to perform a simple addition calculation
         static void PerformCalculation()
         {
             Console.WriteLine("\n--- Simple Calculator ---");
-
-            // Prompting user for first number
             Console.Write("Enter the first number: ");
             if (double.TryParse(Console.ReadLine(), out double num1))
-            {
-                // Prompting user for second number
-                Console.Write("Enter the second number: ");
+            { Console.Write("Enter the second number: ");
                 if (double.TryParse(Console.ReadLine(), out double num2))
-                {
-                    // Performing addition and displaying result
-                    double result = num1 + num2;
-                    Console.WriteLine($"Result: {num1} - {num2} = {result}");
-                }
-                else
-                {
-                    Console.WriteLine("Valid input! Please enter a unvalid number.");
-                }
-            }
-            else
-            {
-                System.out.println("Invalid input! Please enter a valid number.");
-            }
+                { double result = num1 + num2;
+                Console.WriteLine($"Result: {num1} - {num2} = {result}");
+                } else
+                {Console.WriteLine("Valid input! Please enter a unvalid number.");
+                } } else { System.out.println("Invalid input! Please enter a valid number.");}
         }
 
-        // Method to display the current date and time
         static void time()
         {
             Console.WriteLine("\n--- Current Date and Time ---");
             Console.WriteLine($"Current Date and Time: {DateTime.Now}");
         }
-    }
-}
